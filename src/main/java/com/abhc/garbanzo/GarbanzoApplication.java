@@ -14,9 +14,17 @@ public class GarbanzoApplication {
 		int myInt = scanner.nextInt();
 		for (int i = 0; i < myInt; i++) {
 			String myString = scanner.next();
+			char[] chars = myString.toCharArray();
+			String odds = "";
+			String evens = "";
 			for (int j = 0; j < myString.length(); j++) {
-
+				if (j % 2 == 0) {
+					evens += chars[j];
+				} else {
+					odds += chars[j];
+				}
 			}
+			System.out.println(evens + " " + odds);
 		}
 		scanner.close();
 	}
